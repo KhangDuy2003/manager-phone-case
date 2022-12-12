@@ -3,13 +3,13 @@ $strFileController='../controller/AccountController.php';
 require_once $strFileController;
 $controllerObj=new AccountController();
 
-if(isset($_GET["re"])){
-    $controllerObj->run("REGITER");
+if(isset($_GET["edit"])){
+    $controllerObj->editGet($_GET["edit"]);
 }else{
-    if(isset($_GET["profile"])){
-        $controllerObj->run("PROFILE");
+    if(isset($_GET["post"])){
+        $controllerObj->editPost();
     }else{
-        $controllerObj->run("LOGIN");
+        $controllerObj->delete($_GET["delete"]);
     }
 }
 ?>

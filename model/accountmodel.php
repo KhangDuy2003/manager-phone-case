@@ -109,11 +109,69 @@ class accountmodel {
         }
     }
     public function getAllUser(){
-        $consulta = $this->connection->prepare("SELECT username,address,phone,email,role FROM registration");
+        $consulta = $this->connection->prepare("SELECT id,username,address,phone,email,role FROM registration");
         $consulta->execute();
         $result = $consulta->fetchAll();
         $this->connection = null; //cierre de conexión
         return $result;
+        
+    }
+    public function delete($id){
+        $sql = "DELETE FROM registration WHERE id=$id";
+        $consulta = $this->connection->prepare($sql);
+        $consulta->execute();
+        if($consulta == true){
+            echo '<script>alert("Delete thành công")</script>';
+            require_once __DIR__ . "/../view/admin.php"; 
+        }
+        else{
+            echo '<script>alert("Delete thất bại, vui lòng kiểm tra lại")</script>';
+            require_once __DIR__ . "/../view/admin.php";
+        }
+    }
+    public function editGet($id){
+        $consulta = $this->connection->prepare("SELECT id,username,address,phone,email,password,role FROM registration where id =$id ");
+        $consulta->execute();
+        $result = $consulta->fetchAll();
+        $this->connection = null; //cierre de conexión
+        return $result[0];
+    }
+    
+    
+    public function editPost(){
+        $Username = $_POST["username"];
+        $email =$_POST["email"];
+        $address = $_POST["address"];
+        $phone=  $_POST["phone"];
+        $role=  $_POST["role"];
+        $id=  $_POST["id"];
+        try{
+            $data = [
+                'username' => $Username,
+                'email' => $email,
+                'address' => $address,
+                'phone' => $phone,
+                'role' => $role,
+                'id' => $id
+            ];
+            $sql = "UPDATE registration SET username=:username, email=:email,address=:address,phone=:phone, role=:role WHERE id=:id";
+            $consulta= $this->connection->prepare($sql);
+            $consulta->execute($data);
+           
+            $this->connection = null;
+            if($consulta == true){
+                echo '<script>alert("Update thành công")</script>';
+                require_once __DIR__ . "/../view/admin.php";
+            }
+            else{
+                echo '<script>alert("Update thất bại, vui lòng kiểm tra lại")</script>';
+                require_once __DIR__ . "/../view/admin.php";
+                }
+            }
+        catch (Exception $e) {
+            echo '<script>alert("Update thất bại,' . $e -> getMessage() . '")</script>';
+            require_once __DIR__ . "/../view/admin.php";
+        }
         
     }
 
@@ -139,11 +197,12 @@ class accountmodel {
             if($consulta == true){
                 echo '<script>alert("Đăng ký thành công")</script>';
                 require_once __DIR__ . "/../view/login.php";
-                }else{
+            } 
+            else{
                 echo '<script>alert("Đăng ký thất bại, vui lòng kiểm tra lại")</script>';
                 require_once __DIR__ . "/../view/register.php";
                 }
-            } 
+            }
         catch (Exception $e) {
             echo '<script>alert("Đăng ký thất bại,' . $e -> getMessage() . '")</script>';
             require_once __DIR__ . "/../view/register.php";
