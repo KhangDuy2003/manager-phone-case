@@ -175,40 +175,40 @@
 				<li class="span3">
 				  <div class="thumbnail">
 				  <i class="tag"></i>
-					<a href="product_details.html"><img src="themes/images/products/phonecase1.jpg" alt=""></a>
+					<a href="product_details.html"><img src="themes/images/products/phonecase6.jpg" alt=""></a>
 					<div class="caption">
-					  <h5>Product name</h5>
-					  <h4><a class="btn" href="product_details.html">VIEW</a> <span class="pull-right">$222.00</span></h4>
+					  <h5>I'm sick of everything by SSEBONG</h5>
+					  <h4><a class="btn" href="product_details.php">VIEW</a> <span class="pull-right">$95</span></h4>
 					</div>
 				  </div>
 				</li>
 				<li class="span3">
 				  <div class="thumbnail">
 				  <i class="tag"></i>
-					<a href="product_details.html"><img src="themes/images/products/phonecase1.jpg" alt=""></a>
+					<a href="product_summary.php"><img src="themes/images/products/phonecase5.jpg" alt=""></a>
 					<div class="caption">
-					  <h5>Product name</h5>
-					  <h4><a class="btn" href="product_details.html">VIEW</a> <span class="pull-right">$222.00</span></h4>
+					  <h5>Aqua Smiley Transparent</h5>
+					  <h4><a class="btn" href="product_details.php">VIEW</a> <span class="pull-right">$90</span></h4>
 					</div>
 				  </div>
 				</li>
 				<li class="span3">
 				  <div class="thumbnail">
 				  <i class="tag"></i>
-					<a href="product_details.html"><img src="themes/images/products/phonecase3.jpg" alt=""></a>
+					<a href="product_details.html"><img src="themes/images/products/phonecase7.jpg" alt=""></a>
 					<div class="caption">
-					  <h5>Product name</h5>
-					   <h4><a class="btn" href="product_details.html">VIEW</a> <span class="pull-right">$222.00</span></h4>
+					  <h5>Groovy Pattern Clear</h5>
+					   <h4><a class="btn" href="product_details.html">VIEW</a> <span class="pull-right">$65</span></h4>
 					</div>
 				  </div>
 				</li>
 				<li class="span3">
 				  <div class="thumbnail">
 				  <i class="tag"></i>
-					<a href="product_details.html"><img src="themes/images/products/phonecase4.jpg" alt=""></a>
+					<a href="product_details.html"><img src="themes/images/products/phonecase8.jpg" alt=""></a>
 					<div class="caption">
-					  <h5>Product name</h5>
-					   <h4><a class="btn" href="product_details.html">VIEW</a> <span class="pull-right">$222.00</span></h4>
+					  <h5>DRAGONS</h5>
+					   <h4><a class="btn" href="product_details.html">VIEW</a> <span class="pull-right">$65</span></h4>
 					</div>
 				  </div>
 				</li>
@@ -219,38 +219,38 @@
 				<li class="span3">
 				  <div class="thumbnail">
 				  <i class="tag"></i>
-					<a href="product_details.html"><img src="themes/images/products/5.jpg" alt=""></a>
+					<a href="product_details.html"><img src="themes/images/products/phonecase9.jpg" alt=""></a>
 					<div class="caption">
-					  <h5>Product name</h5>
-					  <h4><a class="btn" href="product_details.html">VIEW</a> <span class="pull-right">$222.00</span></h4>
+					  <h5>matt darling sticker collage</h5>
+					  <h4><a class="btn" href="product_details.html">VIEW</a> <span class="pull-right">$90</span></h4>
 					</div>
 				  </div>
 				</li>
 				<li class="span3">
 				  <div class="thumbnail">
 				  <i class="tag"></i>
-					<a href="product_details.html"><img src="themes/images/products/6.jpg" alt=""></a>
+					<a href="product_details.html"><img src="themes/images/products/phonecase10.jpg" alt=""></a>
 					<div class="caption">
-					  <h5>Product name</h5>
-					  <h4><a class="btn" href="product_details.html">VIEW</a> <span class="pull-right">$222.00</span></h4>
+					  <h5>Moon Camping</h5>
+					  <h4><a class="btn" href="product_details.html">VIEW</a> <span class="pull-right">$65</span></h4>
 					</div>
 				  </div>
 				</li>
 				<li class="span3">
 				  <div class="thumbnail">
-					<a href="product_details.html"><img src="themes/images/products/7.jpg" alt=""></a>
+					<a href="product_details.html"><img src="themes/images/products/phonecase11.jpg" alt=""></a>
 					<div class="caption">
-					  <h5>Product name</h5>
-					   <h4><a class="btn" href="product_details.html">VIEW</a> <span class="pull-right">$222.00</span></h4>
+					  <h5>MY SUCCULENT GARDEN by Monika Strigel</h5>
+					   <h4><a class="btn" href="product_details.html">VIEW</a> <span class="pull-right">$95</span></h4>
 					</div>
 				  </div>
 				</li>
 				<li class="span3">
 				  <div class="thumbnail">
-					<a href="product_details.html"><img src="themes/images/products/8.jpg" alt=""></a>
+					<a href="product_details.html"><img src="themes/images/products/phonecase12.jpg" alt=""></a>
 					<div class="caption">
-					  <h5>Product name</h5>
-					   <h4><a class="btn" href="product_details.html">VIEW</a> <span class="pull-right">$222.00</span></h4>
+					  <h5>Yin Yang Cheecker</h5>
+					   <h4><a class="btn" href="product_details.html">VIEW</a> <span class="pull-right">$70</span></h4>
 					</div>
 				  </div>
 				</li>
