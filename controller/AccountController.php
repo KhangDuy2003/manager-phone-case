@@ -20,7 +20,7 @@ class AccountController{
         { 
             case "LOGIN" :
                 $account=new accountmodel($this->connection);
-                $account->login();
+                $result = $account->login();
                 break;
             case "PROFILE" :
                     $account=new accountmodel($this->connection);

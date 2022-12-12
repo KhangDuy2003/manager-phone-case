@@ -74,14 +74,6 @@ class accountmodel {
         $_SESSION['USERNAME'] =  $Username;
         
         if ($count > 0) {
-            if (isset($_COOKIE['USERNAME'])) {
-                unset($_COOKIE['USERNAME']); 
-                setcookie('USERNAME', null, -1, '/'); 
-            }
-            if (isset($_COOKIE['ROLE'])) {
-                unset($_COOKIE['ROLE']); 
-                setcookie('ROLE', null, -1, '/'); 
-            }
             session_start();
             $_SESSION['ROLE'] = $result[0]["role"];
             $cookie_name = "USERNAME";
@@ -91,10 +83,11 @@ class accountmodel {
             $cookie_value = $result[0]["role"];
             setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
                     
-            echo '<script>alert("Đăng nhập thành công")</script>';
+            // echo '<script>alert("Đăng nhậ    p thành công")</script>';
             require_once __DIR__ . "/../view/home.php";
             }
             else {
+           
             echo '<script>alert("Đăng nhập thất bại")</script>';
             require_once __DIR__ . "/../view/home.php";
             }

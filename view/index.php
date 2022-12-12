@@ -65,7 +65,8 @@
 		  <button type="submit" id="submitButton" class="btn btn-primary">Go</button>
     </form>
     <ul id="topMenu" class="nav pull-right">
-	<li class=""><a href="./login.php"><?php
+	<li class=""><a href="./logout.php"><?php
+
 		if(isset($_COOKIE['USERNAME'])){
 			echo 'Logout';
 		}
@@ -521,5 +522,8 @@
 	</div>
 </div>
 <span id="themesBtn"></span>
+
+<script>
+</script>
 </body>
 </html>
