@@ -22,6 +22,26 @@
 	<link rel="stylesheet" href="./asset/css/style.css">
 	
 	<style type="text/css" id="enject"></style>
+	<style>
+		@media screen and (min-width: 1200px) {
+		.span9 {
+			width: 1200px !important;
+		}
+		.thumbnail-css {
+		width: 262px;
+		height: 260px;	
+}
+
+		.custom-price-css{
+			position: relative;
+			top: 0%;
+			left: 79%;
+			z-index: 10;
+		}
+
+  }
+
+	</style>
   </head>
 <body>
 <div id="header">
@@ -100,7 +120,7 @@
 		<div class="carousel-inner">
 		  <div class="item active">
 		  <div class="container">
-			<a href=""><img style="width:100%" src="themes/images/carousel/1.png" alt="special offers"/></a>
+			<a href=""><img style="width:100%" src="themes/images/products/phonecase5.jpg" </a>
 			<div class="carousel-caption">
 				  <h4>Second Thumbnail label</h4>
 				  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
@@ -174,42 +194,42 @@
 			  <div class="item active">
 			  <ul class="thumbnails">
 				<li class="span3">
-				  <div class="thumbnail">
+				  <div class="thumbnail thumbnail-css">
 				  <i class="tag"></i>
 					<a href="#"><img src="themes/images/products/phonecase6.jpg" alt=""></a>
 					<div class="caption">
 					  <h5>I'm sick of everything by SSEBONG</h5>
-					  <h4><span class="pull-right">$95</span></h4>
+						  <h4><span class="custom-price-css pull-right">$95</span></h4>
 					</div>
 				  </div>
 				</li>
 				<li class="span3">
-				  <div class="thumbnail">
+				  <div class="thumbnail thumbnail-css">
 				  <i class="tag"></i>
 					<a href="#"><img src="themes/images/products/phonecase5.jpg" alt=""></a>
 					<div class="caption">
 					  <h5>Aqua Smiley Transparent</h5>
-					  <h4><span class="pull-right">$90</span></h4>
+					  <h4><span class="custom-price-css pull-right">$90</span></h4>
 					</div>
 				  </div>
 				</li>
 				<li class="span3">
-				  <div class="thumbnail">
+				  <div class="thumbnail thumbnail-css">
 				  <i class="tag"></i>
 					<a href="#"><img src="themes/images/products/phonecase7.jpg" alt=""></a>
 					<div class="caption">
 					  <h5>Groovy Pattern Clear</h5>
-					   <h4><span class="pull-right">$65</span></h4>
+					   <h4><span class="custom-price-css pull-right">$65</span></h4>
 					</div>
 				  </div>
 				</li>
 				<li class="span3">
-				  <div class="thumbnail">
+				  <div class="thumbnail thumbnail-css">
 				  <i class="tag"></i>
 					<a href="#"><img src="themes/images/products/phonecase8.jpg" alt=""></a>
 					<div class="caption">
 					  <h5>DRAGONS</h5>
-					   <h4><span class="pull-right">$65</span></h4>
+					   <h4><span class="custom-price-css pull-right">$65</span></h4>
 					</div>
 				  </div>
 				</li>
@@ -218,40 +238,40 @@
 			   <div class="item">
 			  <ul class="thumbnails">
 				<li class="span3">
-				  <div class="thumbnail">
+				  <div class="thumbnail thumbnail-css">
 				  <i class="tag"></i>
 					<a href="#"><img src="themes/images/products/phonecase9.jpg" alt=""></a>
 					<div class="caption">
 					  <h5>matt darling sticker collage</h5>
-					  <h4> <span class="pull-right">$90</span></h4>
+					  <h4> <span class="custom-price-css pull-right">$90</span></h4>
 					</div>
 				  </div>
 				</li>
 				<li class="span3">
-				  <div class="thumbnail">
+				  <div class="thumbnail thumbnail-css">
 				  <i class="tag"></i>
 					<a href="#"><img src="themes/images/products/phonecase10.jpg" alt=""></a>
 					<div class="caption">
 					  <h5>Moon Camping</h5>
-					  <h4> <span class="pull-right">$65</span></h4>
+					  <h4> <span class="custom-price-css pull-right">$65</span></h4>
 					</div>
 				  </div>
 				</li>
 				<li class="span3">
-				  <div class="thumbnail">
+				  <div class="thumbnail thumbnail-css">
 					<a href="#"><img src="themes/images/products/phonecase11.jpg" alt=""></a>
 					<div class="caption">
 					  <h5>MY SUCCULENT GARDEN by Monika Strigel</h5>
-					   <h4> <span class="pull-right">$95</span></h4>
+					   <h4> <span class="custom-price-css pull-right">$95</span></h4>
 					</div>
 				  </div>
 				</li>
 				<li class="span3">
-				  <div class="thumbnail">
-					<a href="#"><img src="themes/images/products/phonecase12.jpg" alt=""></a>
+				  <div class="thumbnail thumbnail-css">
+					<a href="#"><img src="themes/images/products/phonecase3.jpg" alt=""></a>
 					<div class="caption">
 					  <h5>Yin Yang Cheecker</h5>
-					   <h4> <span class="pull-right">$70</span></h4>
+					   <h4> <span class="custom-price-css pull-right">$70</span></h4>
 					</div>
 				  </div>
 				</li>
