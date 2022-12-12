@@ -69,17 +69,21 @@
 		 
 		  <button type="submit" id="submitButton" class="btn btn-primary">Go</button>
     </form>
-    <ul id="topMenu" class="nav pull-right">
+	<ul id="topMenu" class="nav pull-right">
 	<li class=""><a href="./login.php"><?php
-		if(isset($_SESSION['USERNAME'])){
+		if(isset($_COOKIE['USERNAME'])){
 			echo 'Logout';
 		}
 	 ?></a></li>
-	
+	<li class=""><a href="./admin.php"><?php
+		if (isset($_COOKIE['ROLE']) && $_COOKIE['ROLE'] == "ADMIN"){
+			echo 'Admin';
+		}
+	 ?></a></li>
 	
 	 <li class=""><a href="./account.php?profile=<?php
-	 if(isset($_SESSION['USERNAME'])){
-		echo $_SESSION['USERNAME']; 
+	 if(isset($_COOKIE['USERNAME'])){
+		echo $_COOKIE['USERNAME']; 
 	}else{
 		echo "";
 	}
@@ -195,7 +199,7 @@
 		<li class="active"> SHOPPING CART</li>
     </ul>
 	<h3>  SHOPPING CART [ <small> <?php echo count($ShoppingCart); ?>
-	Item(s) </small>]<a href="products.html" class="btn btn-large pull-right"><i class="icon-arrow-left"></i> Continue Shopping </a></h3>	
+	Item(s) </small>]<a href="home.php" class="btn btn-large pull-right"><i class="icon-arrow-left"></i> Continue Shopping </a></h3>	
 	<hr class="soft"/>
 	
 			

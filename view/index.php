@@ -77,8 +77,8 @@
 	 ?></a></li>
 	
 	 <li class=""><a href="./account.php?profile=<?php
-	 if(isset($_SESSION['USERNAME'])){
-		echo $_SESSION['USERNAME']; 
+	 if(isset($_COOKIE['USERNAME'])){
+		echo $_COOKIE['USERNAME']; 
 	}else{
 		echo "";
 	}
