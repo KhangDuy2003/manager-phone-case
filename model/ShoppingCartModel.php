@@ -11,7 +11,7 @@ class ShoppingCartModel {
     
     public function getAll(){
 
-        $Username = $_POST['session'];
+        $Username = $_COOKIE['USERNAME'];
         $consulta1 = $this->connection->prepare("SELECT id FROM registration where username = '$Username'");
         $consulta1->execute();
         $result1 = $consulta1 -> fetchAll();
@@ -47,5 +47,31 @@ class ShoppingCartModel {
      
     }
 
+    public function insert(){
+        $phonecaseid = $_POST["phonecaseid"];
+        $amount = $_POST["amount"];
+        $userName = $_COOKIE['USERNAME'];
+        try{
+            $consulta1 = $this->connection->prepare("SELECT id FROM registration where username = '$userName'");
+            $consulta1->execute();
+            $result1 = $consulta1 -> fetchAll();
+            $userid =  $result1[0]["id"];
+
+            $consulta = $this->connection->prepare("INSERT INTO shoppingcart (phonecaseid, amount, userid)
+            VALUES (:phonecaseid,:amount,:userid)");
+            $consulta->execute(array(
+            "phonecaseid" => $phonecaseid,
+            "amount" => $amount,
+            "userid" => $userid
+            ));
+            $this->connection = null;
+            
+            require_once __DIR__ . "/../view/shoppingCart.php";
+          }
+        catch (Exception $e) {
+            echo '<script>alert("Có lỗi,' . $e -> getMessage() . '")</script>';
+            require_once __DIR__ . "/../view/home.php";
+        }
+      }
 }
 ?>

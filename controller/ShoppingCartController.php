@@ -35,6 +35,14 @@ class ShoppingCartController{
             "listData"=>$ShoppingCart
         ));
     }
+
+    public function insert(){
+        $ShoppingCart =new ShoppingCartModel($this->connection);
+        $ShoppingCart=$ShoppingCart->insert();
+        $this->view("product_summary.php",array(
+            "listData"=>$ShoppingCart
+        ));
+    }
   
    
     public function view($visit,$data){

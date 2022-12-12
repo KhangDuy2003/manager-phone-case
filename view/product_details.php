@@ -222,12 +222,13 @@
 			<div class="span6">
 				<h3><?php echo $phonecasedata["name"]; ?> </h3>
 				<hr class="soft"/>
-				<form class="form-horizontal qtyFrm">
+				<form class="form-horizontal qtyFrm" action="./insertCart.php" method="post" >
 				  <div class="control-group">
 					<label class="control-label"><span><?php echo $phonecasedata["price"]; ?> </span></label>
 					<div class="controls">
-					<input type="number" value="<?php echo $phonecasedata["value"]; ?>" class="span1" placeholder="Qty."/>
-					  <button type="submit" class="btn btn-large btn-primary pull-right"> Add to cart <i class=" icon-shopping-cart"></i></button>
+					<input type="hidden" name="phonecaseid" value="<?php echo $phonecasedata["id"]; ?>">
+					<input type="number" name="amount" value="<?php echo $phonecasedata["value"]; ?>" class="span1" placeholder="Qty."/>
+					<button type="submit" class="btn btn-large btn-primary pull-right"> Add to cart <i class=" icon-shopping-cart"></i></button>
 					</div>
 				  </div>
 				</form>
