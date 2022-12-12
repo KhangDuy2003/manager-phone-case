@@ -402,7 +402,7 @@
 			  <?php foreach($phonecasedata as $phonecase) {?>
                 <li class="span3">
 				  <div class="thumbnail">
-					<a  href="../controller/PhoneCaseDetailController.php"><img src="themes/images/products/<?php echo $phonecase['image']; ?>" alt=""/></a>
+					<a  href="./home.php?id=<?php echo $phonecase["id"]; ?>"><img src="themes/images/products/<?php echo $phonecase['image']; ?>" alt=""/></a>
 					<div class="caption">
 					  <h5><?php echo $phonecase["name"]; ?></h5>
 					  <h4 style="text-align:center"><a class="btn" href="./home.php?id=<?php echo $phonecase["id"]; ?>"> <i class="icon-zoom-in"></i></a> <a class="btn" href="./home.php?id=<?php echo $phonecase["id"]; ?>">Add to <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">$<?php echo $phonecase["price"]; ?></a></h4>
