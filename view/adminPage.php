@@ -54,6 +54,19 @@
     .async-hide {
       opacity: 0 !important
     }
+    th.text-uppercase.text-secondary.text-xxs.font-weight-bolder.opacity-7 {
+    color: red !important;
+    font-size: 14px !important;
+}
+th.text-secondary.opacity-7 {
+    font-size: 14px !important;
+    text-transform: uppercase;
+    color: red !important;
+}
+a.text-secondary.font-weight-bold.text-xs {
+    color: #4960d6 !important;
+    font-size: 16px !important;
+}
   </style>
   <script>
     (function (a, s, y, n, c, h, i, d, e) {
@@ -135,7 +148,7 @@
     <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link  " href="#">
+          <a class="nav-link  active" href="#">
             <div
               class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 45 40" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -157,11 +170,11 @@
                 </g>
               </svg>
             </div>
-            <span class="nav-link-text ms-1">Dashboard</span>
+            <span class="nav-link-text ms-1">User</span>
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link  active" href="../pages/tables.html">
+        <li class="nav-item"> 
+          <a class="nav-link" href="../pages/tables.html">
             <div
               class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -183,7 +196,7 @@
                 </g>
               </svg>
             </div>
-            <span class="nav-link-text ms-1">Tables</span>
+            <span class="nav-link-text ms-1">Phone Case</span>
           </a>
         </li>
         <li class="nav-item">
@@ -209,7 +222,7 @@
                 </g>
               </svg>
             </div>
-            <span class="nav-link-text ms-1">Billing</span>
+            <span class="nav-link-text ms-1">Shopping Cart</span>
           </a>
         </li>
         <li class="nav-item">
@@ -238,7 +251,7 @@
                 </g>
               </svg>
             </div>
-            <span class="nav-link-text ms-1">Virtual Reality</span>
+            <span class="nav-link-text ms-1">Dashboard</span>
           </a>
         </li>
         <li class="nav-item">
@@ -267,7 +280,7 @@
                 </g>
               </svg>
             </div>
-            <span class="nav-link-text ms-1">RTL</span>
+            <span class="nav-link-text ms-1">Bill</span>
           </a>
         </li>
 
@@ -295,7 +308,7 @@
                 </g>
               </svg>
             </div>
-            <span class="nav-link-text ms-1">Sign In</span>
+            <span class="nav-link-text ms-1">Statistic</span>
           </a>
         </li>
         <li class="nav-item">
@@ -327,7 +340,7 @@
                 </g>
               </svg>
             </div>
-            <span class="nav-link-text ms-1">Sign Up</span>
+            <span class="nav-link-text ms-1">Revenue</span>
           </a>
         </li>
       </ul>
@@ -487,7 +500,8 @@
                     </tr>
                   </thead>
                   <tbody>
-                  <?php foreach($profile as $phonecase) {?>
+                  <?php foreach ($profile as $phonecase)
+{ ?>
                     <tr>
                       <td>
                         <div class="d-flex px-2 py-1">
@@ -525,7 +539,8 @@
                       </td>
                     </tr>
                     
-                <?php } ?>
+                <?php
+} ?>
                  
 
                   </tbody>
@@ -535,4 +550,3 @@
           </div>
         </div>
       </div>
-
