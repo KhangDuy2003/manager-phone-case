@@ -66,11 +66,15 @@
     </form>
     <ul id="topMenu" class="nav pull-right">
 	<li class=""><a href="./login.php"><?php
-		if(isset($_SESSION['USERNAME'])){
+		if(isset($_COOKIE['USERNAME'])){
 			echo 'Logout';
 		}
 	 ?></a></li>
-	
+	<li class=""><a href="./admin.php"><?php
+		if (isset($_COOKIE['ROLE']) && $_COOKIE['ROLE'] == "ADMIN"){
+			echo 'Admin';
+		}
+	 ?></a></li>
 	
 	 <li class=""><a href="./account.php?profile=<?php
 	 if(isset($_SESSION['USERNAME'])){
