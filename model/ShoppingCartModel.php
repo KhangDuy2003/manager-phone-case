@@ -17,7 +17,7 @@ class ShoppingCartModel {
         $result1 = $consulta1 -> fetchAll();
         $userid =  $result1[0]["id"];
 
-        $consulta2 = $this->connection->prepare("SELECT phonecaseid, amount, price FROM shoppingcart where userid = $userid");
+        $consulta2 = $this->connection->prepare("SELECT phonecaseid, amount, total FROM shoppingcart where userid = $userid");
         $consulta2->execute();
         $resultados2 = $consulta2 ->fetchAll();
         $listShoppingCarts=array();
