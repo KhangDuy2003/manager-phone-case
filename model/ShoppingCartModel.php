@@ -27,7 +27,6 @@ class ShoppingCartModel {
         }
 
         $listProducts=array();
-
         $sum = 0;
         for($i = 0; $i < count($listShoppingCarts); $i++) {
           $index = $listShoppingCarts[$i][0];
@@ -37,6 +36,7 @@ class ShoppingCartModel {
           $cost =  $resultados3[0]["price"] * $listShoppingCarts[$i][1];
           $indexResutl3 = count($resultados3[0]);
           $resultados3[0]["cost"] = $cost;
+          $resultados3[0]["cartId"] = $listShoppingCarts[$i]["id"];
           $resultados3[0]["quantity"] = $listShoppingCarts[$i][1];
           array_push($listProducts,$resultados3[0]);
           $sum = $sum + $cost;
@@ -46,7 +46,19 @@ class ShoppingCartModel {
       return $listProducts;
      
     }
-
+    public function deleteCart($id){
+      $sql = "DELETE FROM shoppingcart WHERE id=$id";
+      $consulta = $this->connection->prepare($sql);
+      $consulta->execute();
+      if($consulta == true){
+          echo '<script>alert("Delete thành công")</script>';
+          require_once __DIR__ . "/../view/shoppingCart.php"; 
+      }
+      else{
+          echo '<script>alert("Delete thất bại, vui lòng kiểm tra lại")</script>';
+          require_once __DIR__ . "/../view/shoppingCart.php";
+      }
+  }
     public function insert(){
         $phonecaseid = $_POST["phonecaseid"];
         $amount = $_POST["amount"];

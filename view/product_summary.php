@@ -6,16 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-<!--Less styles -->
-   <!-- Other Less css file //different less files has different color scheam
-	<link rel="stylesheet/less" type="text/css" href="themes/less/simplex.less">
-	<link rel="stylesheet/less" type="text/css" href="themes/less/classified.less">
-	<link rel="stylesheet/less" type="text/css" href="themes/less/amelia.less">  MOVE DOWN TO activate
-	-->
-	<!--<link rel="stylesheet/less" type="text/css" href="themes/less/bootshop.less">
-	<script src="themes/js/less.js" type="text/javascript"></script> -->
-	
-<!-- Bootstrap style --> 
     <link id="callCss" rel="stylesheet" href="themes/bootshop/bootstrap.min.css" media="screen"/>
     <link href="themes/css/base.css" rel="stylesheet" media="screen"/>
 <!-- Bootstrap style responsive -->	
@@ -147,6 +137,7 @@
 	<table class="table table-bordered">
               <thead>
                 <tr>
+					<th></th>
                   <th>Product</th>
                   <th>Description</th>
                   <th>Quantity/Update</th>
@@ -157,7 +148,9 @@
               <tbody>
 			  <?php foreach($ShoppingCart as $item) {?>
                 <tr>
-                  <td> <img width="60" src="themes/images/products/<?php echo $item['image']; ?>" alt=""/></td>
+				
+				<td><a href="./cart.php?de=<?php echo $item['cartId']; ?>"><img style="width:200px; height:200px; object-fit:contain" src="https://www.pngkey.com/png/detail/203-2036190_trash-icon-recycle-bin-circle-icon.png" alt=""></a></td>
+                  <td><img width="60" src="themes/images/products/<?php echo $item['image']; ?>" alt=""/></td>
                   <td><?php echo $item['description']; ?></td>
 				  <td>
 					<div class="input-append"><input readonly class="span1" style="max-width:34px" value="<?php echo $item['quantity']; ?>" placeholder="1" id="appendedInputButtons" size="16" type="text">

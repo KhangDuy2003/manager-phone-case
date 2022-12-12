@@ -43,7 +43,11 @@ class ShoppingCartController{
             "listData"=>$ShoppingCart
         ));
     }
-  
+    
+    public function deleteCart($id){
+        $ShoppingCart =new ShoppingCartModel($this->connection);
+        $ShoppingCart=$ShoppingCart->deleteCart($id);
+    }
    
     public function view($visit,$data){
         $ShoppingCart = $data["listData"];
