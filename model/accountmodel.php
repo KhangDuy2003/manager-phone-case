@@ -71,25 +71,21 @@ class accountmodel {
         $result = $consulta->fetchAll();
         $this->connection = null; //cierre de conexión
         $count = count($result);
-
+        $_SESSION['USERNAME'] =  $Username;
+        if (isset($_COOKIE['USERNAME'])) {
+            unset($_COOKIE['USERNAME']); 
+            setcookie('USERNAME', null, -1, '/'); 
+        }
+        if (isset($_COOKIE['ROLE'])) {
+            unset($_COOKIE['ROLE']); 
+            setcookie('ROLE', null, -1, '/'); 
+        }
         if ($count > 0) {
             session_start();
             $_SESSION['ROLE'] = $result[0]["role"];
-            
-            $_SESSION['USERNAME'] =  $Username;
-            if (isset($_COOKIE['USERNAME'])) {
-                unset($_COOKIE['USERNAME']); 
-                setcookie('USERNAME', null, -1, '/'); 
-            }
-
             $cookie_name = "USERNAME";
             $cookie_value = $Username;
             setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
-
-            if (isset($_COOKIE['ROLE'])) {
-                unset($_COOKIE['ROLE']); 
-                setcookie('ROLE', null, -1, '/'); 
-            }
             $cookie_name = "ROLE";
             $cookie_value = $result[0]["role"];
             setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
