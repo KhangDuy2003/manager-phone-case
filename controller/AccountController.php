@@ -46,17 +46,22 @@ class AccountController{
             "account"=>$user
         ));
     }
-    public function edit($id){
+    public function editGet($id){
         $account=new accountmodel($this->connection);
-        $user = $account-> getAllUser();
-        $this->view("adminPage.php",array(
+        $user = $account-> editGet($id);
+        $this->view("editUser.php",array(
             "account"=>$user
         ));
+    }
+    public function editPost(){
+        $account=new accountmodel($this->connection);
+        $user = $account-> editPost();
     }
 
     public function delete($id){
         $account=new accountmodel($this->connection);
         $user = $account-> delete($id);
+      
     }
 
    

@@ -4,8 +4,12 @@ require_once $strFileController;
 $controllerObj=new AccountController();
 
 if(isset($_GET["edit"])){
-    $controllerObj->edit($_GET["edit"]);
+    $controllerObj->editGet($_GET["edit"]);
 }else{
-    $controllerObj->delete($_GET["delete"]);
+    if(isset($_GET["post"])){
+        $controllerObj->editPost();
+    }else{
+        $controllerObj->delete($_GET["delete"]);
+    }
 }
 ?>
