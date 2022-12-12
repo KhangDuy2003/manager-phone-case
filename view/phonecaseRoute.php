@@ -7,7 +7,11 @@ if(isset($_GET["edit"])){
     $controllerObj->editGet($_GET["edit"]);
 }else{
     if(isset($_GET["post"])){
-        $controllerObj->editPost();
+        if($_GET["post"] === "in"){
+            $controllerObj->create();
+        }else{
+            $controllerObj->editPost();
+        }
     }else{
         $controllerObj->deletePhonecase($_GET["delete"]);
     }

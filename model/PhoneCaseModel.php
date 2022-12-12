@@ -94,6 +94,44 @@ class PhoneCaseModel {
             require_once __DIR__ . '/../view/admin.php';
         }
     }
+    
+    public function create(){
+        $name = $_POST["name"];
+        $price =$_POST["price"];
+        $value = $_POST["value"];
+        $description=  $_POST["description"];
+        $image=  $_POST["image"];
+        try{
+            $data = [
+                'name' => $name,
+                'price' => $price,
+                'value' => $value,
+                'description' => $description,
+                'image' => $image
+            ];
+            $sql = " INSERT INTO phonecase (name, price, value, description, image)
+            VALUES (:name, :price,:value,:description, :image)";
+            $consulta= $this->connection->prepare($sql);
+            $consulta->execute($data);
+           
+            $this->connection = null;
+            if($consulta == true){
+                echo '<script>alert("Create thành công")</script>';
+                $_GET['route'] = 'PHONE_CASE';
+            require_once __DIR__ . '/../view/admin.php';
+            }
+            else{
+                echo '<script>alert("Create thất bại, vui lòng kiểm tra lại")</script>';
+                $_GET['route'] = 'PHONE_CASE';
+            require_once __DIR__ . '/../view/admin.php';
+                }
+            }
+        catch (Exception $e) {
+            echo '<script>alert("Create thất bại,' . $e -> getMessage() . '")</script>';
+            $_GET['route'] = 'PHONE_CASE';
+            require_once __DIR__ . '/../view/admin.php';
+        }
+    }
     public function editPost(){
         $name = $_POST["name"];
         $price =$_POST["price"];

@@ -70,8 +70,10 @@ class PhoneCaseController{
         $phonecasedata=$phonecase->editPost();
        
     }
-    
-    
+    public function create(){
+        $phonecase=new PhoneCaseModel($this->connection);
+        $phonecasedata=$phonecase->create();
+    }
 
     public function deletePhonecase($id){
         $phonecase=new PhoneCaseModel($this->connection);

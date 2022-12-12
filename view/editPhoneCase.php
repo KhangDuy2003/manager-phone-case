@@ -99,7 +99,7 @@
                                                 <label class="col-md-4"><span>Description: </span></label>
                                                 <div class="col-md-8">
                                                     <textarea rows="4" cols="5" name="description"
-                                                        class="form-control">value="<?php echo $phonecasedata["description"]; ?>"</textarea>
+                                                        class="form-control"><?php echo $phonecasedata["description"]; ?></textarea>
                                                 </div>
                                             </div>
                                         </div>

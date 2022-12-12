@@ -66,7 +66,7 @@
                         <div class="widget-header">
                             <div class="row">
                                 <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                    <h4 style="text-align: center;">EDIT PHONE CASE</h4>
+                                    <h4 style="text-align: center;">CREATE PHONE CASE</h4>
 
                                 </div>
                             </div>
@@ -76,7 +76,7 @@
                 </div>
             </div>
             <div class="widget-content widget-content-area add-manage-product-2">
-                <form class="row" action="./phonecaseRoute.php?post=True" method="post">
+                <form class="row" action="./phonecaseRoute.php?post=in" method="post">
                     <div class="col-xl-6 col-md-12">
                         <div class="card card-default">
                             <div class="card-heading">
@@ -89,8 +89,7 @@
                                             <div class="row">
                                                 <label class="col-md-4">Name :</label>
                                                 <div class="col-md-8">
-                                                    <input class="form-control" value="<?php echo $phonecasedata["name"]; ?>" name="name" type="text">
-                                                    <input class="form-control" name="id" type="hidden">
+                                                    <input class="form-control" name="name" type="text">
                                                 </div>
                                             </div>
                                         </div>

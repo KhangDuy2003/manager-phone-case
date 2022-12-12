@@ -482,7 +482,7 @@ a.text-secondary.font-weight-bold.text-xs {
         <div class="col-12">
           <div class="card mb-4">
             <div class="card-header pb-0">
-              <h6>Phone case</h6>
+              <a href="./createPhoneCase.php"><img style="width: 20px; height: 20px; margin-right: 4px" src="https://cdn.pixabay.com/photo/2016/03/21/05/05/plus-1270001_960_720.png" alt=""> Create</a>
             </div>
             <div class="card-body px-0 pt-0 pb-2">
               <div class="table-responsive p-0">
