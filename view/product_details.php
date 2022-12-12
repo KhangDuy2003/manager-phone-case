@@ -168,16 +168,13 @@
 			<hr class="soft"/>
 			<div class="row">	  
 					<div class="span2">
-						<img src="themes/images/products/5.jpg" alt=""/>
+						<img src="themes/images/products/phonecase4.jpg" alt=""/>
 					</div>
 					<div class="span4">
 						<h3>New | Available</h3>				
 						<hr class="soft"/>
 						<h5>Product Name </h5>
-						<p>
-						Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies - 
-						that is why our goods are so popular..
-						</p>
+					
 						<a class="btn btn-small pull-right" href="product_details.html">View Details</a>
 						<br class="clr"/>
 					</div>
