@@ -108,6 +108,14 @@ class accountmodel {
 
         }
     }
+    public function getAllUser(){
+        $consulta = $this->connection->prepare("SELECT username,address,phone,email,role FROM registration");
+        $consulta->execute();
+        $result = $consulta->fetchAll();
+        $this->connection = null; //cierre de conexión
+        return $result;
+        
+    }
 
     public function Register(){
         $Username = $_POST["username"];

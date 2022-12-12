@@ -39,6 +39,13 @@ class AccountController{
         }
        
     }
+    public function getAllUser(){
+        $account=new accountmodel($this->connection);
+        $user = $account-> getAllUser();
+        $this->view("adminPage.php",array(
+            "account"=>$user
+        ));
+    }
 
    
     public function view($visit,$data){
