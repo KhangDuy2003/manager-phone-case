@@ -35,9 +35,10 @@
 <div id="header">
 <div class="container">
 <div id="welcomeLine" class="row">
-	<div class="span6">Welcome!<strong><?php
-	 if(isset($_SESSION['USERNAME'])){
-		echo $_SESSION['USERNAME']; 
+<div class="span6">Welcome!<strong> <?php
+	 if(isset($_COOKIE['USERNAME'])){
+		echo $_COOKIE['USERNAME']; 
+		
 	}else{
 		echo "user";
 	}
@@ -45,14 +46,13 @@
 	 ?></strong></div>
 	<div class="span6">
 	<div class="pull-right">
-		<a href="product_summary.html"><span class="">Fr</span></a>
-		<a href="product_summary.html"><span class="">Es</span></a>
-		<span class="btn btn-mini">En</span>
-		<a href="product_summary.html"><span>&pound;</span></a>
-		<span class="btn btn-mini">$155.00</span>
-		<a href="product_summary.html"><span class="">$</span></a>
-		<a href="product_summary.html"><span class="btn btn-mini btn-primary"><i class="icon-shopping-cart icon-white"></i> [ 3 ] Itemes in your cart </span> </a> 
-	</div>
+		<form  method="post" action="./shoppingCart.php">
+			<input type="hidden"  name="session" value='<?php
+				if(isset($_COOKIE['USERNAME'])){
+					echo $_COOKIE['USERNAME']; 
+				}else{
+					echo "";
+	}?>' >
 	</div>
 </div>
 <!-- Navbar ================================================== -->

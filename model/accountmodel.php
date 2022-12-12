@@ -97,3 +97,47 @@ class accountmodel {
                 $consulta->execute();
                 $result = $consulta->fetchAll();
                 $this->connection = null; //cierre de conexión
+                return $result[0];
+        }else{
+            echo '<script>alert("Vui lòng đăng nhập")</script>';
+            require_once __DIR__ . "/../view/login.php";
+            return null;
+
+        }
+    }
+
+    public function Register(){
+        $Username = $_POST["username"];
+        $password = md5($_POST["password"]);
+        $email =$_POST["email"];
+        $address = $_POST["address"];
+        $phone=  $_POST["phone"];
+        $role=  "USER";
+        try{
+            $consulta = $this->connection->prepare("INSERT INTO registration (username, password, email, address, phone, role)
+            VALUES (:username,:password,:email,:address, :phone,:role)");
+            $consulta->execute(array(
+            "username" => $Username,
+            "password" => $password,
+            "email" => $email,
+            "address" => $address,
+            "phone" => $phone,
+            "role" => $role
+            ));
+            $this->connection = null;
+            if($consulta == true){
+                echo '<script>alert("Đăng ký thành công")</script>';
+                require_once __DIR__ . "/../view/login.php";
+                }else{
+                echo '<script>alert("Đăng ký thất bại, vui lòng kiểm tra lại")</script>';
+                require_once __DIR__ . "/../view/register.php";
+                }
+            } 
+        catch (Exception $e) {
+            echo '<script>alert("Đăng ký thất bại,' . $e -> getMessage() . '")</script>';
+            require_once __DIR__ . "/../view/register.php";
+        }
+    }
+  
+}
+?>
