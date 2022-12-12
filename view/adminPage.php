@@ -512,14 +512,14 @@
                         <span class="text-secondary text-xs font-weight-bold"><?php echo $phonecase["role"]; ?></span>
                       </td>
                       <td class="align-middle">
-                        <a style="margin-left: 20px; display: inline-block; " href="javascript:;"
+                        <a style="margin-left: 20px; display: inline-block; " href="./action.php?edit=<?php echo $phonecase["id"]; ?>"
                           class="text-secondary font-weight-bold text-xs" data-toggle="tooltip"
                           data-original-title="Edit user">
                           <i class="fa fa-edit"></i>
                         </a>
-                        <a style="margin-left: 20px; display: inline-block; width: 20px;" href="javascript:;"
+                        <a style="margin-left: 20px; display: inline-block; width: 20px;" href="./action.php?delete=<?php echo $phonecase["id"]; ?>"
                           class="text-secondary font-weight-bold text-xs" data-toggle="tooltip"
-                          data-original-title="Edit user">
+                          data-original-title="delete user">
                           <i class="fa fa-trash"></i>
                         </a>
                       </td>

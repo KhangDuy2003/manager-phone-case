@@ -46,6 +46,18 @@ class AccountController{
             "account"=>$user
         ));
     }
+    public function edit($id){
+        $account=new accountmodel($this->connection);
+        $user = $account-> getAllUser();
+        $this->view("adminPage.php",array(
+            "account"=>$user
+        ));
+    }
+
+    public function delete($id){
+        $account=new accountmodel($this->connection);
+        $user = $account-> delete($id);
+    }
 
    
     public function view($visit,$data){
