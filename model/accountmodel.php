@@ -122,11 +122,13 @@ class accountmodel {
         $consulta->execute();
         if($consulta == true){
             echo '<script>alert("Delete thành công")</script>';
-            require_once __DIR__ . "/../view/admin.php"; 
+            $_GET['route'] = 'USER';
+            require_once __DIR__ . '/../view/admin.php'; 
         }
         else{
             echo '<script>alert("Delete thất bại, vui lòng kiểm tra lại")</script>';
-            require_once __DIR__ . "/../view/admin.php";
+            $_GET['route'] = 'USER';
+            require_once __DIR__ . '/../view/admin.php';
         }
     }
     public function editGet($id){
@@ -161,16 +163,19 @@ class accountmodel {
             $this->connection = null;
             if($consulta == true){
                 echo '<script>alert("Update thành công")</script>';
-                require_once __DIR__ . "/../view/admin.php";
+                $_GET['route'] = 'USER';
+                require_once __DIR__ . '/../view/admin.php';
             }
             else{
                 echo '<script>alert("Update thất bại, vui lòng kiểm tra lại")</script>';
-                require_once __DIR__ . "/../view/admin.php";
+                $_GET['route'] = 'USER';
+                require_once __DIR__ . '/../view/admin.php';
                 }
             }
         catch (Exception $e) {
             echo '<script>alert("Update thất bại,' . $e -> getMessage() . '")</script>';
-            require_once __DIR__ . "/../view/admin.php";
+            $_GET['route'] = 'USER';
+            require_once __DIR__ . '/../view/admin.php';
         }
         
     }

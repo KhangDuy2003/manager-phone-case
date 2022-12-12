@@ -58,6 +58,21 @@ class PhoneCaseController{
         ));
     }
 
+    public function editGet($id){
+        $phonecase=new PhoneCaseModel($this->connection);
+        $phonecasedata=$phonecase->getPhoneCaseById($id);
+        $this->view("editPhoneCase.php",array(
+            "phonecasedata"=>$phonecasedata
+        ));
+    }
+    public function editPost(){
+        $phonecase=new PhoneCaseModel($this->connection);
+        $phonecasedata=$phonecase->editPost();
+       
+    }
+    
+    
+
     public function deletePhonecase($id){
         $phonecase=new PhoneCaseModel($this->connection);
         $phonecasedata=$phonecase->deletePhoneCase($id);

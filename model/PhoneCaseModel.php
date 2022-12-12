@@ -94,6 +94,45 @@ class PhoneCaseModel {
             require_once __DIR__ . '/../view/admin.php';
         }
     }
+    public function editPost(){
+        $name = $_POST["name"];
+        $price =$_POST["price"];
+        $value = $_POST["value"];
+        $description=  $_POST["description"];
+        $image=  $_POST["image"];
+        $id=  $_POST["id"];
+        try{
+            $data = [
+                'name' => $name,
+                'price' => $price,
+                'value' => $value,
+                'description' => $description,
+                'image' => $image,
+                'id' => $id
+            ];
+            $sql = "UPDATE phonecase SET name=:name, price=:price,value=:value,description=:description, image=:image WHERE id=:id";
+            $consulta= $this->connection->prepare($sql);
+            $consulta->execute($data);
+           
+            $this->connection = null;
+            if($consulta == true){
+                echo '<script>alert("Update thành công")</script>';
+                $_GET['route'] = 'PHONE_CASE';
+            require_once __DIR__ . '/../view/admin.php';
+            }
+            else{
+                echo '<script>alert("Update thất bại, vui lòng kiểm tra lại")</script>';
+                $_GET['route'] = 'PHONE_CASE';
+            require_once __DIR__ . '/../view/admin.php';
+                }
+            }
+        catch (Exception $e) {
+            echo '<script>alert("Update thất bại,' . $e -> getMessage() . '")</script>';
+            $_GET['route'] = 'PHONE_CASE';
+            require_once __DIR__ . '/../view/admin.php';
+        }
+    }
+    
     public function getPhoneCaseById($id){
 
         $consulta = $this->connection->prepare("SELECT id,name,price,value,description, image FROM phonecase where id = $id");
