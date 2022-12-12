@@ -36,6 +36,11 @@ class PhoneCaseController{
             "phonecasedata"=>$phonecasedata
         ));
     }
+    public function getAllPhoneCase(){
+        $phonecase=new PhoneCaseModel($this->connection);
+        $profile=$phonecase->getAll();  
+        require_once  __DIR__ . "/../view/phonecasePage.php";
+    }
 
     public function search(){
         $phonecase=new PhoneCaseModel($this->connection);
@@ -51,6 +56,11 @@ class PhoneCaseController{
         $this->view("product_details.php",array(
             "phonecasedata"=>$phonecasedata
         ));
+    }
+
+    public function deletePhonecase($id){
+        $phonecase=new PhoneCaseModel($this->connection);
+        $phonecasedata=$phonecase->deletePhoneCase($id);
     }
     
    

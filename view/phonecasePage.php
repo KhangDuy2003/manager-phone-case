@@ -7,9 +7,7 @@
   <link rel="apple-touch-icon" sizes="76x76"
     href="https://demos.creative-tim.com/soft-ui-dashboard/assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="https://demos.creative-tim.com/soft-ui-dashboard/assets/img/apple-icon.png">
-  <title>
-    Admin page
-  </title>
+  <title>Phone case page</title>
 
 
   <link rel="canonical" href="https://www.creative-tim.com/product/soft-ui-dashboard" />
@@ -66,6 +64,13 @@ th.text-secondary.opacity-7 {
 a.text-secondary.font-weight-bold.text-xs {
     color: #4960d6 !important;
     font-size: 16px !important;
+}
+.three-dot-custom{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width:200px;
+    display: block; /* some width */
 }
   </style>
   <script>
@@ -148,7 +153,7 @@ a.text-secondary.font-weight-bold.text-xs {
     <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link  active" href="#">
+          <a class="nav-link" href="./admin.php?route=USER">
             <div
               class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 45 40" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -174,7 +179,7 @@ a.text-secondary.font-weight-bold.text-xs {
           </a>
         </li>
         <li class="nav-item"> 
-          <a class="nav-link" href="./admin.php?route=PHONE_CASE">
+          <a class="nav-link active" href="./admin.php?route=PHONE_CASE">
             <div
               class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -200,7 +205,7 @@ a.text-secondary.font-weight-bold.text-xs {
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="#">
+          <a class="nav-link " href="#">
             <div
               class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -354,10 +359,9 @@ a.text-secondary.font-weight-bold.text-xs {
       <div class="container-fluid py-1 px-3">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
-            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
-            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Tables</li>
+            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Page</a></li>
           </ol>
-          <h6 class="font-weight-bolder mb-0">Tables</h6>
+          <h6 class="font-weight-bolder mb-0">Phone case</h6>
         </nav>
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
           <div class="ms-md-auto pe-md-3 d-flex align-items-center">
@@ -478,7 +482,7 @@ a.text-secondary.font-weight-bold.text-xs {
         <div class="col-12">
           <div class="card mb-4">
             <div class="card-header pb-0">
-              <h6>User table</h6>
+              <h6>Phone case</h6>
             </div>
             <div class="card-body px-0 pt-0 pb-2">
               <div class="table-responsive p-0">
@@ -486,16 +490,17 @@ a.text-secondary.font-weight-bold.text-xs {
                   <thead>
                
                     <tr>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Username</th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Gmail</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">id</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Title</th>
                       <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                        Address
+                        Price
                       </th>
                       <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                        Phone</th>
+                        Quantity</th>
                       <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                        Role</th>
-
+                        Description</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                        Image</th>
                       <th class="text-secondary opacity-7">Action</th>
                     </tr>
                   </thead>
@@ -507,31 +512,34 @@ a.text-secondary.font-weight-bold.text-xs {
                         <div class="d-flex px-2 py-1">
 
                           <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm"><?php echo $phonecase["username"]; ?></h6>
+                            <h6 class="mb-0 text-sm"><?php echo $phonecase["id"]; ?></h6>
 
                           </div>
                         </div>
                       </td>
                       <td>
-                        <p class="text-xs font-weight-bold mb-0"><?php echo $phonecase["email"]; ?></p>
+                        <p class="text-xs font-weight-bold mb-0"><?php echo $phonecase["name"]; ?></p>
 
                       </td>
                       <td class="align-middle text-center text-sm">
-                        <p class="text-xs font-weight-bold mb-0"><?php echo $phonecase["address"]; ?></p>
+                        <p class="text-xs font-weight-bold mb-0"><?php echo $phonecase["price"]; ?></p>
                       </td>
                       <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold"><?php echo $phonecase["phone"]; ?></span>
+                        <span class="text-secondary text-xs font-weight-bold"><?php echo $phonecase["value"]; ?></span>
                       </td>
                       <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold"><?php echo $phonecase["role"]; ?></span>
+                        <span style="" class="text-secondary text-xs font-weight-bold three-dot-custom"><?php echo $phonecase["description"]; ?></span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <span class="text-secondary text-xs font-weight-bold"><?php echo $phonecase["image"]; ?></span>
                       </td>
                       <td class="align-middle">
-                        <a style="margin-left: 20px; display: inline-block; " href="./action.php?edit=<?php echo $phonecase["id"]; ?>"
+                        <a style="margin-left: 20px; display: inline-block; " href="./phonecaseRoute.php?edit=<?php echo $phonecase["id"]; ?>"
                           class="text-secondary font-weight-bold text-xs" data-toggle="tooltip"
                           data-original-title="Edit user">
                           <i class="fa fa-edit"></i>
                         </a>
-                        <a style="margin-left: 20px; display: inline-block; width: 20px;" href="./action.php?delete=<?php echo $phonecase["id"]; ?>"
+                        <a style="margin-left: 20px; display: inline-block; width: 20px;" href="./phonecaseRoute.php?delete=<?php echo $phonecase["id"]; ?>"
                           class="text-secondary font-weight-bold text-xs" data-toggle="tooltip"
                           data-original-title="delete user">
                           <i class="fa fa-trash"></i>

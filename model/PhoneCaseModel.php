@@ -60,22 +60,6 @@ class PhoneCaseModel {
     public function setDescription($description) {
         $this->description= $description;
     }
-
-    public function save(){
-
-        $consulta = $this->connection->prepare("INSERT INTO phonecase (name,price,value,description, image)
-                                        VALUES (:name,:price,:value,:description, :image)");
-        $consulta->execute(array(
-            "name" => $this->name,
-            "price" => $this->price,
-            "value" => $this->value,
-            "description" => $this->description,
-            "image" => $this->image
-        ));
-        $this->connection = null;
-
-        return $save;
-    }
     
     public function getAll(){
 
@@ -95,7 +79,21 @@ class PhoneCaseModel {
         $this->connection = null; //cierre de conexión
         return $resultados;
     }
-
+    public function deletePhoneCase($id){
+        $sql = "DELETE FROM phonecase WHERE id=$id";
+        $consulta = $this->connection->prepare($sql);
+        $consulta->execute();
+        if($consulta == true){
+            echo '<script>alert("Delete thành công")</script>';
+            $_GET['route'] = 'PHONE_CASE';
+            require_once __DIR__ . '/../view/admin.php';
+        }
+        else{
+            echo '<script>alert("Delete thất bại, vui lòng kiểm tra lại")</script>';
+            $_GET['route'] = 'PHONE_CASE';
+            require_once __DIR__ . '/../view/admin.php';
+        }
+    }
     public function getPhoneCaseById($id){
 
         $consulta = $this->connection->prepare("SELECT id,name,price,value,description, image FROM phonecase where id = $id");

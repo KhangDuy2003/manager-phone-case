@@ -91,7 +91,7 @@
 			echo 'Logout';
 		}
 	 ?></a></li>
-	<li class=""><a href="./admin.php"><?php
+	<li class=""><a href="./admin.php?route=USER"><?php
 		if (isset($_COOKIE['ROLE']) && $_COOKIE['ROLE'] == "ADMIN"){
 			echo 'Admin';
 		}
