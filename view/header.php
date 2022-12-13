@@ -29,6 +29,17 @@
 		background-color: #cccccc;
 		color: #666666;
 		}
+		th,td,tr{
+			border: 1px solid #ccc;
+		}
+		.content-custom{
+			padding: 10px !important;
+			overflow: hidden;
+			width: 100px;
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			}
 		@media screen and (min-width: 1200px) {
 		.span9 {
 			width: 1200px !important;

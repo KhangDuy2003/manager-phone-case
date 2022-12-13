@@ -21,25 +21,27 @@
                 <tr>
 					<th></th>
                   <th>Product</th>
+				  <th>Title</th>
                   <th>Description</th>
                   <th>Quantity/Update</th>
 				  <th>Price</th>
-                  <th>Total</th>
+                  <th style="display:block">Total</th>
 				</tr>
               </thead>
               <tbody>
 			  <?php foreach($ShoppingCart as $item) {?>
                 <tr>
 				
-				<td><a href="./cart.php?de=<?php echo $item['cartId']; ?>"><img style="width:200px; height:200px; object-fit:contain" src="https://www.pngkey.com/png/detail/203-2036190_trash-icon-recycle-bin-circle-icon.png" alt=""></a></td>
+				<td><a href="./cart.php?de=<?php echo $item['cartId']; ?>" style="display: flex;align-item:center; justify-content: center;"><img style="width:30px; height:30px; object-fit:contain" src="./themes/images/bin.png" alt=""></a></td>
                   <td><img width="60" src="themes/images/products/<?php echo $item['image']; ?>" alt=""/></td>
-                  <td><?php echo $item['description']; ?></td>
+				  <td ><?php echo $item['name']; ?></td>
+                  <td ><span class="content-custom"><?php echo $item['description']; ?></span></td>
 				  <td>
 					<div class="input-append"><input readonly class="span1" style="max-width:34px" value="<?php echo $item['quantity']; ?>" placeholder="1" id="appendedInputButtons" size="16" type="text">
 					</div>
 				  </td>
                   <td><?php echo $item['price']; ?></td>
-                  <td><?php echo $item['cost']; ?></td>
+                  <td style="max-width:50px"><?php echo $item['cost']; ?></td>
                 </tr>
             <?php } ?>
 				 <tr>
