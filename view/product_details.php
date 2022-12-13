@@ -55,9 +55,17 @@
 					<label class="control-label"><span><?php echo $phonecasedata["price"]; ?> </span></label>
 					<div class="controls">
 					<input type="hidden" name="phonecaseid" value="<?php echo $phonecasedata["id"]; ?>">
-					<input type="hidden" name="originQuatity" value="<?php echo $phonecasedata["value"]; ?>">
-					<input type="number" name="amount" value="<?php echo $phonecasedata["value"]; ?>" class="span1" placeholder="Qty."/>
-					<button type="submit" class="btn btn-large btn-primary pull-right"> Add to cart <i class=" icon-shopping-cart"></i></button>
+					<?php if($phonecasedata["value"] > 0) {?>
+						<input type="hidden" class="quantity-js" name="originQuatity" value="<?php echo $phonecasedata["value"]; ?>">
+						<input type="number" name="amount" value="<?php echo $phonecasedata["value"]; ?>" class="span1" placeholder="Qty."/>
+						<button type="submit" class="btn btn-large btn-primary pull-right"> Add to cart <i class=" icon-shopping-cart"></i></button>
+					<?php } ?>
+					<?php if($phonecasedata["value"] <= 0) {?>
+						<img src="./themes/images/sold_out.jpg" style="width:200px; height:160px; object-fit:contain" alt="Out of stock">
+						<!-- <input type="number" readonly name="amount" value="Out of stock" class="span1" placeholder="Out of stock"/> -->
+						<button type="button" disabled class="btn btn-large btn-primary pull-right"> Add to cart <i class=" icon-shopping-cart"></i></button>
+					<?php } ?>
+					
 					</div>
 				  </div>
 				</form>

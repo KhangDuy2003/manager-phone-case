@@ -23,6 +23,12 @@
 	
 	<style type="text/css" id="enject"></style>
 	<style>
+		button:disabled,
+		button[disabled]{
+		border: 1px solid #999999;
+		background-color: #cccccc;
+		color: #666666;
+		}
 		@media screen and (min-width: 1200px) {
 		.span9 {
 			width: 1200px !important;
