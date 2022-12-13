@@ -64,7 +64,7 @@
 <div id="header">
 <div class="container">
 <div id="welcomeLine" class="row">
-	<div class="span6">Welcome!<strong> <?php
+	<div class="span6">Hello!<strong> <?php
 	 if(isset($_COOKIE['USERNAME'])){
 		echo $_COOKIE['USERNAME']; 
 		
