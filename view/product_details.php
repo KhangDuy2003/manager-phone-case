@@ -56,8 +56,8 @@
 					<div class="controls">
 					<input type="hidden" name="phonecaseid" value="<?php echo $phonecasedata["id"]; ?>">
 					<?php if($phonecasedata["value"] > 0) {?>
-						<input type="hidden" class="quantity-js" name="originQuatity" value="<?php echo $phonecasedata["value"]; ?>">
-						<input type="number" name="amount" value="<?php echo $phonecasedata["value"]; ?>" class="span1" placeholder="Qty."/>
+						<input type="hidden" class="root-quantity-js" name="originQuatity" value="<?php echo $phonecasedata["value"]; ?>">
+						<input type="number" name="amount" value="<?php echo $phonecasedata["value"]; ?>" class="span1 quantity-js" placeholder="Qty."/>
 						<button type="submit" class="btn btn-large btn-primary pull-right"> Add to cart <i class=" icon-shopping-cart"></i></button>
 					<?php } ?>
 					<?php if($phonecasedata["value"] <= 0) {?>
@@ -316,6 +316,19 @@
 </div>
 </div> </div>
 </div>
+<script>
+	const rootQuantity = document.querySelector(".root-quantity-js").value;
+	const quantity = document.querySelector(".quantity-js");
+	quantity.addEventListener('change', (event) => {
+		if(event.target.value > rootQuantity){
+			quantity.value = rootQuantity;
+		}
+		if(event.target.value <= 1){
+			quantity.value = 1;
+		}
+});
+
+</script>
 <!-- MainBody End ============================= -->
 <!-- Footer ================================================================== -->
 <?php include 'footer.php';?>
