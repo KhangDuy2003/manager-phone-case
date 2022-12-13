@@ -55,6 +55,7 @@
 					<label class="control-label"><span><?php echo $phonecasedata["price"]; ?> </span></label>
 					<div class="controls">
 					<input type="hidden" name="phonecaseid" value="<?php echo $phonecasedata["id"]; ?>">
+					<input type="hidden" name="originQuatity" value="<?php echo $phonecasedata["value"]; ?>">
 					<input type="number" name="amount" value="<?php echo $phonecasedata["value"]; ?>" class="span1" placeholder="Qty."/>
 					<button type="submit" class="btn btn-large btn-primary pull-right"> Add to cart <i class=" icon-shopping-cart"></i></button>
 					</div>
