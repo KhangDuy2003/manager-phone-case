@@ -31,26 +31,26 @@
 							<div class="control-group">
 								<label class="control-label" for="inputLnam">Username <sup>*</sup></label>
 								<div class="controls">
-									<input name="username" type="text" id="inputLnam" placeholder="Username">
+									<input name="username" required type="text" id="inputLnam" placeholder="Username">
 								</div>
 							</div>
 							<div class="control-group">
 								<label class="control-label" for="input_email">Email <sup>*</sup></label>
 								<div class="controls">
-									<input type="text" name="email" id="input_email" placeholder="Email">
+									<input type="text" required name="email" id="input_email" placeholder="Email">
 								</div>
 							</div>
 							<div class="control-group">
 								<label class="control-label" for="inputPassword1">Password <sup>*</sup></label>
 								<div class="controls">
-									<input type="password" name="password" id="inputPassword1" placeholder="Password">
+									<input type="password" required name="password" id="inputPassword1" placeholder="Password">
 								</div>
 							</div>
 							
 							<div class="control-group">
 								<label class="control-label" for="address">Address<sup>*</sup></label>
 								<div class="controls">
-									<input type="text" name="address" id="address" placeholder="Adress" /> <span>Street
+									<input type="text" required name="address" id="address" placeholder="Adress" /> <span>Street
 										address, P.O. box, company name, c/o</span>
 								</div>
 							</div>
@@ -65,7 +65,7 @@
 							<div class="control-group">
 								<label class="control-label" for="mobile">Mobile Phone<sup>*</sup></label>
 								<div class="controls">
-									<input type="text" name="phone" id="mobile" placeholder="Mobile Phone" />
+									<input type="text" required name="phone" id="mobile" placeholder="Mobile Phone" />
 								</div>
 							</div>
 

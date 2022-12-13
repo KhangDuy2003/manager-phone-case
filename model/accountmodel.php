@@ -188,26 +188,43 @@ class accountmodel {
         $phone=  $_POST["phone"];
         $role=  "USER";
         try{
-            $consulta = $this->connection->prepare("INSERT INTO registration (username, password, email, address, phone, role)
-            VALUES (:username,:password,:email,:address, :phone,:role)");
-            $consulta->execute(array(
-            "username" => $Username,
-            "password" => $password,
-            "email" => $email,
-            "address" => $address,
-            "phone" => $phone,
-            "role" => $role
-            ));
-            $this->connection = null;
-            if($consulta == true){
-                echo '<script>alert("Đăng ký thành công")</script>';
-                require_once __DIR__ . "/../view/login.php";
-            } 
-            else{
-                echo '<script>alert("Đăng ký thất bại, vui lòng kiểm tra lại")</script>';
-                require_once __DIR__ . "/../view/register.php";
-                }
+            $consultaName = $this->connection->prepare("SELECT username FROM registration where username = '$Username' ");
+            $consultaName->execute();
+            $resultName = $consultaName->fetchAll();
+           if(count($resultName) > 0){
+                echo '<script>alert("User name: '. $Username .'  exist")</script>';
+                    require_once __DIR__ . "/../view/register.php";
+           }else{
+                $consultaEmail = $this->connection->prepare("SELECT username FROM registration where email = '$email'");
+                $consultaEmail->execute();
+                $resultEmail = $consultaEmail->fetchAll();
+                if(count($resultEmail) > 0){
+                    echo '<script>alert("Email : '. $email .'  exist")</script>';
+                        require_once __DIR__ . "/../view/register.php";
+                }else{
+                        $consulta = $this->connection->prepare("INSERT INTO registration (username, password, email, address, phone, role)
+                        VALUES (:username,:password,:email,:address, :phone,:role)");
+                        $consulta->execute(array(
+                        "username" => $Username,
+                        "password" => $password,
+                        "email" => $email,
+                        "address" => $address,
+                        "phone" => $phone,
+                        "role" => $role
+                        ));
+                        $this->connection = null;
+                        if($consulta == true){
+                            echo '<script>alert("Đăng ký thành công")</script>';
+                            require_once __DIR__ . "/../view/login.php";
+                        } 
+                        else{
+                            echo '<script>alert("Đăng ký thất bại, vui lòng kiểm tra lại")</script>';
+                            require_once __DIR__ . "/../view/register.php";
+                        
+                        }
+                    }
             }
+        }
         catch (Exception $e) {
             echo '<script>alert("Đăng ký thất bại,' . $e -> getMessage() . '")</script>';
             require_once __DIR__ . "/../view/register.php";
