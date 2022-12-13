@@ -7,7 +7,7 @@ class Connecter{
         $this->driver="mysql";
         $this->host="localhost";
         $this->user="root";
-        $this->pass="";
+        $this->pass="quoctuan";
         $this->database="shop_phone_case";
         $this->charset="utf8";
     }

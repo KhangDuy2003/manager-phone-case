@@ -32,7 +32,7 @@
 			  <?php foreach($ShoppingCart as $item) {?>
                 <tr>
 				
-				<td><a href="./cart.php?de=<?php echo $item['cartId']; ?>" style="display: flex;align-item:center; justify-content: center;"><img style="width:30px; height:30px; object-fit:contain" src="./themes/images/bin.png" alt=""></a></td>
+				<td><a href="./cart.php?de=<?php echo $item['cartId']; ?>&q=<?php echo $item['quantity']; ?>&ps=<?php echo $item['id']; ?>" style="display: flex;align-item:center; justify-content: center;"><img style="width:30px; height:30px; object-fit:contain" src="./themes/images/bin.png" alt=""></a></td>
                   <td><img width="60" src="themes/images/products/<?php echo $item['image']; ?>" alt=""/></td>
 				  <td ><?php echo $item['name']; ?></td>
                   <td ><span class="content-custom"><?php echo $item['description']; ?></span></td>
