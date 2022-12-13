@@ -14,11 +14,11 @@
 <!-- Google-code-prettify -->	
 	<link href="themes/js/google-code-prettify/prettify.css" rel="stylesheet"/>
 <!-- fav and touch icons -->
-<link rel="shortcut icon" href="themes/images/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="themes/images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="themes/images/ico/apple-touch-icon-114-precomposed.png">
+<link rel="shortcut icon" href="themes/images/products/favicon_phone.png">
+    <!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="themes/images/products/favicon_phone.png"> -->
+    <!-- <link rel="apple-touch-icon-precomposed" sizes="114x114" href="themes/images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="themes/images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="themes/images/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="themes/images/ico/apple-touch-icon-57-precomposed.png"> -->
 	<link rel="stylesheet" href="./asset/css/style.css">
 	
 	<style type="text/css" id="enject"></style>
@@ -95,7 +95,7 @@
 	<span class="icon-bar"></span>
 </a>
   <div class="navbar-inner">
-    <a class="brand" href="./home.php"><img src="themes/images/logo.png" alt="PhoneCaseShop"/></a>
+    <a class="brand" href="./home.php"><img src="themes/images/products/logo.jpg" style="width: 300px !important; height: 100px;object-fit:cover; border-radius:8px" alt="PhoneCaseShop"/></a>
 		<form class="form-inline navbar-search" method="post" action="./home.php" >
 		<input id="srchFld" name="key_searching" class="srchTxt" type="text" />
 		 
