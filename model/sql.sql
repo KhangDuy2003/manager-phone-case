@@ -5,7 +5,8 @@ CREATE TABLE `phonecase` (
   `name` varchar(250) NOT NULL,
   `price` double NOT NULL,
   `value` int(11) NOT NULL,
-  `description` text NOT NULL
+  `description` text NOT NULL,
+  `image` varchar(255)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 ALTER TABLE `phonecase`
 ADD PRIMARY KEY (`id`);
